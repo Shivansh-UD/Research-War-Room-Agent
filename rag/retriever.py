@@ -6,7 +6,7 @@ from rag.indexer import getCollection
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 
-def retrievePapers(query: str, nResults:int = 5) -> list[dict]:
+def retrievePapers(query: str, nResults:int = 25) -> list[dict]:
     """
     This function searches ChromaDB for papers relevant to the query.
     Returns the top n_results most semantically similar papers.
