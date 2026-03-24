@@ -7,7 +7,7 @@ client = Groq(api_key=GROQ_API_KEY) # setting up client wioth our API key
 #Now we are defing the agent (Skeptic agent) with the help of the API key
 def skepticAgent(topic: str) -> str:
     #retrive the papers
-    papers = retrievePapers(f"Strong evidence not supporting {topic}", nResults= 7)
+    papers = retrievePapers(f"Strong evidence not supporting {topic}", nResults= 10)
 
     #Now we will format the papers so that its easier for the prompt to work with it.
     evidence = ""

@@ -9,7 +9,7 @@ mcp = FastMCP("research-war-room")
 # its just a function where where we give it a topic and a max value of 25  as parameters and it fetches the papers
 
 @mcp.tool() # This is similar to how we do this in the Spring Framework in JAVA (@RestController)
-def fetchPapers(topic: str, maxResults = 25) -> list[dict]:
+def fetchPapers(topic: str, maxResults = 45) -> list[dict]:
     """
     Fetches research papers from ArXiv based on a topic.
     Returns a list of papers with title, abstract, and link.

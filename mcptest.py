@@ -34,32 +34,41 @@
 
 
 
-from mcp_server.arxivServer import fetchPapers
-from rag.indexer import indexPapers
-from agents.optimistic import optimisticAgent
-from agents.skeptic import skepticAgent
-from agents.devil import devilAgent
-from agents.summarizer import summarizerAgent
+# from mcp_server.arxivServer import fetchPapers
+# from rag.indexer import indexPapers
+# from agents.optimistic import optimisticAgent
+# from agents.skeptic import skepticAgent
+# from agents.devil import devilAgent
+# from agents.summarizer import summarizerAgent
 
-# Step 1 — fetch and index papers
-topic = "artificial intelligence impact on society"
-papers = fetchPapers(topic, maxResults=15)
-indexPapers(papers)
+# # Step 1 — fetch and index papers
+# topic = "artificial intelligence impact on society"
+# papers = fetchPapers(topic, maxResults=15)
+# indexPapers(papers)
 
-# Step 2 — run all 3 debate agents
-print("=== OPTIMIST ===")
-optimistArg = optimisticAgent(topic)
-print(optimistArg)
+# # Step 2 — run all 3 debate agents
+# print("=== OPTIMIST ===")
+# optimistArg = optimisticAgent(topic)
+# print(optimistArg)
 
-print("\n=== SKEPTIC ===")
-skepticArg = skepticAgent(topic)
-print(skepticArg)
+# print("\n=== SKEPTIC ===")
+# skepticArg = skepticAgent(topic)
+# print(skepticArg)
 
-print("\n=== DEVIL ===")
-devilArg = devilAgent(topic)
-print(devilArg)
+# print("\n=== DEVIL ===")
+# devilArg = devilAgent(topic)
+# print(devilArg)
 
-# Step 3 — summarizer reads the full debate
-print("\n=== SUMMARIZER ===")
-summary = summarizerAgent(topic, optimistArg, skepticArg, devilArg)
-print(summary)
+# # Step 3 — summarizer reads the full debate
+# print("\n=== SUMMARIZER ===")
+# summary = summarizerAgent(topic, optimistArg, skepticArg, devilArg)
+# print(summary)
+
+
+
+
+from orchestrator import orchestratorAgent
+
+results = orchestratorAgent("effects of social media on mental health")
+print(results["optimist"])
+print(results["skeptic"])

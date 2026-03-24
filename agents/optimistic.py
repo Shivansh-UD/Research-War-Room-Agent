@@ -7,7 +7,7 @@ client = Groq(api_key=GROQ_API_KEY) # setting up client wioth our API key
 #Now we are defing the agent (Optimistic agent) with the help of the API key
 def optimisticAgent(topic: str) -> str:
     #first we will retrive the papers from the DB using the retrievePapers() function
-    papers = retrievePapers(f"strong evidence supporting {topic}", nResults= 7)
+    papers = retrievePapers(f"strong evidence supporting {topic}", nResults= 10)
 
     #Now we will format the papers so that its easier for the prompt to work with it.
     evidence = ""
