@@ -67,4 +67,4 @@ These topics are handpicked because ArXiv has **dense, conflicting literature** 
 
 ---
 
-*Generated for [Research War Room](https://github.com/) — Four AI agents. Real papers. One brutal debate.*
+*[Research War Room](https://github.com/) — Four AI agents. Real papers. One brutal debate.*
